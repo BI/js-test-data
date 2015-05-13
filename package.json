@@ -1,0 +1,32 @@
+{
+  "name": "js-test-data",
+  "version": "1.0.0",
+  "description": "A data library to make test cases easier to implement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/webpack-dev-server --inline --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BI/js-test-data.git"
+  },
+  "keywords": [
+    "test",
+    "data"
+  ],
+  "author": "Barquin International",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BI/js-test-data/issues"
+  },
+  "homepage": "https://github.com/BI/js-test-data",
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "dependencies": {
+    "lodash": "^3.8.0"
+  }
+}
