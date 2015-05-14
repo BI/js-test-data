@@ -21,11 +21,6 @@
     "url": "https://github.com/BI/js-test-data/issues"
   },
   "homepage": "https://github.com/BI/js-test-data",
-  "devDependencies": {
-    "jsx-loader": "^0.12.2",
-    "webpack": "^1.5.3",
-    "webpack-dev-server": "^1.7.0"
-  },
   "dependencies": {
     "lodash": "^3.8.0"
   }
