@@ -1,18 +1,19 @@
 # js-test-data
 
-A data library to make test cases easier to implement.
+A data library to make test cases easier to implement. Choose from a few different data formats to suit your needs.
 
-##Available Test Data Properties
-* **TagValues**: A flat array of data values used to test the [react-tag-list](https://github.com/BI/react-tag-list).
-* **RCMOptions**: An array of option objects used to test the [react-compact-multiselect](https://github.com/BI/react-compact-multiselect).
-* **XzibitOptions**: An array of option objects used to test the [react-xzibit-select](https://github.com/BI/react-xzibit-select).
-* **XzibitDimensions**: An array of dimension objects used to test the filterable dimensions in the [react-xzibit-select](https://github.com/BI/react-xzibit-select).
+##Available Test Data 
+* **Data.Toppings**: A flat array of data values. Used in testing the [react-tag-list](https://github.com/BI/react-tag-list).
+* **Data.TVShows**: An array of option objects containing label and value properties, as well as another property to be used for 'grouping' the options. Used in testing the [react-compact-multiselect](https://github.com/BI/react-compact-multiselect).
+* **Data.Fruits**: An array of option objects containing label and value properties, as well as 'grouping' properties allowing the data to have another dimension to it.Used in testing the [react-xzibit-select](https://github.com/BI/react-xzibit-select).
 
+###Grouping Data
+The grouping data is also available.
+* **Data.Colors**: A flat array of color names.
+* **Data.TVNetworks**: A flat array of Tv Network names.
+* **Data.Plants**: A flat array of plant names.
 
 ```js
-var testData = require('js-test-data');
-testData.TagValues
-testData.RCMOptions
-testData.XzibitOptions
-testData.XzibitDimensions
+var Data = require('js-test-data');
+Data.Fruits
 ```

@@ -53,10 +53,14 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2);
+	var tvNetworks = __webpack_require__(4);
+	var colors = __webpack_require__(5);
+	var plants = __webpack_require__(6);
+	
 	var Data = {};
 	
-	//react-tag-list values is a flat array of values
-	var TagValues = ["Angus Beef Patty", 
+	
+	var Toppings = ["Angus Beef Patty", 
 					 "Tomatoes", 
 					 "Lettuce",
 					 "American Cheese", 
@@ -68,85 +72,60 @@
 					 "Jalepenos", 
 					 "Onion"];
 	
-	//react-compact-multiselect options are value, label, and optional groupBy properties
-	var RCMOptions = [
-		{value: 1, label: "South Park", network: "Comedy Central"},
-		{value: 2, label: "All That", network: "Nickelodeon"},
-		{value: 3, label: "Buffy", network: "WB"}, 
-		{value: 4, label: "Charmed", network: "WB"},
-		{value: 5, label: "Supernatural", network: "WB"},
-		{value: 6, label: "Chappelle's show", network: "Comedy Central"},
-		{value: 7, label: "The Daily Show", network: "Comedy Central"},
-		{value: 8, label: "Sponge Bob", network: "Nickelodeon"},
-		{value: 9, label: "Dora the Explorer", network: "Nickelodeon"},
-		{value: 10, label: "Doug", network: "Nickelodeon"},
-		{value: 11, label: "The Ren & Stimpy Show", network: "Nickelodeon"},
-		{value: 12, label: "7th Heaven", network: "WB"}
+	var TVShows = [
+		{value: 1, label: "South Park", network: tvNetworks.COMEDY_CENTRAL},
+		{value: 2, label: "All That", network: tvNetworks.NICKELODEON},
+		{value: 3, label: "Buffy", network: tvNetworks.WB}, 
+		{value: 4, label: "Charmed", network: tvNetworks.WB},
+		{value: 5, label: "Supernatural", network: tvNetworks.WB},
+		{value: 6, label: "Chappelle's show", network: tvNetworks.COMEDY_CENTRAL},
+		{value: 7, label: "The Daily Show", network: tvNetworks.COMEDY_CENTRAL},
+		{value: 8, label: "Sponge Bob", network: tvNetworks.NICKELODEON},
+		{value: 9, label: "Dora the Explorer", network: tvNetworks.NICKELODEON},
+		{value: 10, label: "Doug", network: tvNetworks.NICKELODEON},
+		{value: 11, label: "The Ren & Stimpy Show", network: tvNetworks.NICKELODEON},
+		{value: 12, label: "7th Heaven", network: tvNetworks.WB}
 	];
 	
-	var XzibitOptions = [
-		{ value: "Apple", label: "Apple", color: ["Red", "Green", "Yellow"], growsOn: "Tree"},
-		{ value: "Banana", label: "Banana", color: "Yellow", growsOn: "Tree"},
-		{ value: "Coconut", label: "Coconut", color: "Brown", growsOn: "Tree"},
-		{ value: "Durian", label: "Durian", color: "Green", growsOn: "Tree"},
-		{ value: "Elderberry", label: "Elderberry", color: "Purple", growsOn: "Tree"},
-		{ value: "Fig", label: "Fig", color: "Purple", growsOn: "Tree"},
-		{ value: "Grape", label: "Grape", color: ["Purple", "Green", "Red"], growsOn: "Vine"},
-		{ value: "Huckleberry", label: "Huckleberry", color: "Blue", growsOn: "Bush"},
-		{ value: "Ita Palm", label: "Ita Palm", color: "Brown", growsOn: "Tree"},
-		{ value: "Jujubes", label: "Jujubes", color: "Brown", growsOn: "Tree"},
-		{ value: "Kiwi", label: "Kiwi", color: "Green", growsOn: "Tree"},
-		{ value: "Lemon", label: "Lemon", color: "Yellow", growsOn: "Tree"},
-		{ value: "Mango", label: "Mango", color: "Orange", growsOn: "Tree"},
-		{ value: "Nectarine", label: "Nectarine", color: "Pink", growsOn: "Tree"},
-		{ value: "Orange", label: "Orange", color: "Orange", growsOn: "Tree"},
-		{ value: "Pineapple", label: "Pineapple", color: "Yellow", growsOn: "Tree"},
-		{ value: "Quince", label: "Quince", color: "Yellow", growsOn: "Tree"},
-		{ value: "Raspberry", label: "Raspberry", color: "Red", growsOn: "Bush"},
-		{ value: "Strawberry", label: "Strawberry", color: "Red", growsOn: "Vine"},
-		{ value: "Tangerine", label: "Tangerine", color: "Orange", growsOn: "Tree"},
-		{ value: "Ugli", label: "Ugli", color: "Green", growsOn: "Tree"},
-		{ value: "Voavanga", label: "Voavanga", color: "Brown", growsOn: "Tree"},
-		{ value: "Watermelon", label: "Watermelon", color: "Green", growsOn: "Vine"},
-		{ value: "Xigua Melon", label: "Xigua Melon", color: "Yellow", growsOn: "Vine"},
-		{ value: "Yellow Watermelon", label: "Yellow Watermelon", color: "Green", growsOn: "Vine"},
-		{ value: "Zucchini", label: "Zucchini", color: "Green", growsOn: "Vine"}
+	var Fruits = [
+		{ value: "Apple", label: "Apple", color: [colors.RED, colors.GREEN, colors.YELLOW], growsOn: plants.TREE},
+		{ value: "Banana", label: "Banana", color: colors.YELLOW, growsOn: plants.TREE},
+		{ value: "Coconut", label: "Coconut", color: colors.BROWN, growsOn: plants.TREE},
+		{ value: "Durian", label: "Durian", color: colors.GREEN, growsOn: plants.TREE},
+		{ value: "Elderberry", label: "Elderberry", color: colors.PURPLE, growsOn: plants.TREE},
+		{ value: "Fig", label: "Fig", color: colors.PURPLE, growsOn: plants.TREE},
+		{ value: "Grape", label: "Grape", color: [colors.PURPLE, colors.GREEN, colors.RED], growsOn: plants.VINE},
+		{ value: "Huckleberry", label: "Huckleberry", color: colors.BLUE, growsOn: plants.BUSH},
+		{ value: "Ita Palm", label: "Ita Palm", color: colors.BROWN, growsOn: plants.TREE},
+		{ value: "Jujubes", label: "Jujubes", color: colors.BROWN, growsOn: plants.TREE},
+		{ value: "Kiwi", label: "Kiwi", color: colors.GREEN, growsOn: plants.TREE},
+		{ value: "Lemon", label: "Lemon", color: colors.YELLOW, growsOn: plants.TREE},
+		{ value: "Mango", label: "Mango", color: colors.ORANGE, growsOn: plants.TREE},
+		{ value: "Nectarine", label: "Nectarine", color: colors.PINK, growsOn: plants.TREE},
+		{ value: "Orange", label: "Orange", color: colors.ORANGE, growsOn: plants.TREE},
+		{ value: "Pineapple", label: "Pineapple", color: colors.YELLOW, growsOn: plants.TREE},
+		{ value: "Quince", label: "Quince", color: colors.YELLOW, growsOn: plants.TREE},
+		{ value: "Raspberry", label: "Raspberry", color: colors.RED, growsOn: plants.BUSH},
+		{ value: "Strawberry", label: "Strawberry", color: colors.RED, growsOn: plants.VINE},
+		{ value: "Tangerine", label: "Tangerine", color: colors.ORANGE, growsOn: plants.TREE},
+		{ value: "Ugli", label: "Ugli", color: colors.GREEN, growsOn: plants.TREE},
+		{ value: "Voavanga", label: "Voavanga", color: colors.BROWN, growsOn: plants.TREE},
+		{ value: "Watermelon", label: "Watermelon", color: colors.GREEN, growsOn: plants.VINE},
+		{ value: "Xigua Melon", label: "Xigua Melon", color: colors.YELLOW, growsOn: plants.VINE},
+		{ value: "Yellow Watermelon", label: "Yellow Watermelon", color: colors.GREEN, growsOn: plants.VINE},
+		{ value: "Zucchini", label: "Zucchini", color: colors.GREEN, growsOn: plants.VINE}
 	];
 	
-	var generateXzibitDimensions = function() {
-		var colorOptions = _.uniq(XzibitOptions.map(function(fruit){
-			if (Array.isArray(fruit.color)){
-				return fruit.color[0];
-			}
-			return fruit.color;
-		})).map(function(color){
-			return {value: color, label: color}
-		});
-		var growsOnOptions = _.uniq(XzibitOptions.map(function(fruit){
-			if (Array.isArray(fruit.growsOn)){
-				return fruit.growsOn[0];
-			}
-			return fruit.growsOn;
-		})).map(function(growsOn){
-			return {value: growsOn, label: growsOn}
-		});
-	
-		return [
-			{name: "Color",
-			 key: "color",
-			 options: colorOptions},
-			{name: "Grows On",
-			 key: "growsOn",
-			 options: growsOnOptions}
-		];
+	var generateConstantsArray = function(constantClass) {
+		return Object.keys(constantClass).map(function(key){return constantClass[key];})
 	};
-	var XzibitDimensions = generateXzibitDimensions();
 	
-	
-	Data.TagValues = TagValues;
-	Data.RCMOptions = RCMOptions;
-	Data.XzibitOptions = XzibitOptions;
-	Data.XzibitDimensions = XzibitDimensions;
+	Data.Toppings = Toppings;
+	Data.TVShows = TVShows;
+	Data.Fruits = Fruits;
+	Data.Colors = generateConstantsArray(colors);
+	Data.TVNetworks = generateConstantsArray(tvNetworks);
+	Data.Plants = generateConstantsArray(plants);
 	module.exports = Data;
 	
 
@@ -12375,6 +12354,44 @@
 		return module;
 	}
 
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var tvNetworks = {};
+	tvNetworks.COMEDY_CENTRAL = "Comedy Central";
+	tvNetworks.NICKELODEON = "Nickelodeon";
+	tvNetworks.WB = "WB";
+	
+	module.exports = tvNetworks;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var colors = {};
+	colors.RED = "Red";
+	colors.GREEN = "Green";
+	colors.YELLOW = "Yellow";
+	colors.BLUE = "Blue";
+	colors.BROWN = "Brown";
+	colors.PURPLE = "Purple";
+	colors.ORANGE = "Orange";
+	colors.PINK = "Pink";
+	
+	module.exports = colors;
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var plants = {};
+	plants.BUSH = "Bush";
+	plants.TREE = "Tree";
+	plants.VINE = "Vine";
+	
+	module.exports = plants;
 
 /***/ }
 /******/ ]);
